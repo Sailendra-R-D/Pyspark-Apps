@@ -1,7 +1,7 @@
 # import required packages
 
 from pyspark.sql import SparkSession
-from pyspark.sql import functions as fn
+from pyspark.sql import functions as F
 
 if __name__ == "__main__":
     print("HelloWorld Pyspark Application Started ...")
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         .json("Pokédex.json", multiLine=True)
 
     pokemonsDF = pokemonsDF \
-        .select(fn
+        .select(F
                 .explode(pokemonsDF.pokemon)
                 .alias('pokemon')) \
         .select('pokemon.*')
