@@ -1,0 +1,170 @@
+Pyspark Application Started ...
+root
+ |-- movieId: integer (nullable = true)
+ |-- title: string (nullable = true)
+ |-- genres: string (nullable = true)
+ |-- release_year: integer (nullable = true)
+
++--------------------------------------------------------+------------+
+|title                                                   |release_year|
++--------------------------------------------------------+------------+
+|Kicking and Screaming (1995)                            |1995        |
+|Big Bully (1996)                                        |1996        |
+|Antonia's Line (Antonia) (1995)                         |1995        |
+|Last Summer in the Hamptons (1995)                      |1995        |
+|In the Bleak Midwinter (1995)                           |1995        |
+|Nobody Loves Me (Keiner liebt mich) (1994)              |1994        |
+|Nueba Yol (1995)                                        |1995        |
+|Blue in the Face (1995)                                 |1995        |
+|Jeffrey (1995)                                          |1995        |
+|Love & Human Remains (1993)                             |1993        |
+|Smoke (1995)                                            |1995        |
+|Unstrung Heroes (1995)                                  |1995        |
+|Boys on the Side (1995)                                 |1995        |
+|Ed Wood (1994)                                          |1994        |
+|Madness of King George, The (1994)                      |1994        |
+|Roommates (1995)                                        |1995        |
+|Three Colors: White (Trzy kolory: Bialy) (1994)         |1994        |
+|Swimming with Sharks (1995)                             |1995        |
+|Sum of Us, The (1994)                                   |1994        |
+|Adventures of Priscilla, Queen of the Desert, The (1994)|1994        |
++--------------------------------------------------------+------------+
+only showing top 20 rows
+
++------------+-----------------------------------+-----+
+|release_year|genres                             |count|
++------------+-----------------------------------+-----+
+|2015        |Drama                              |15   |
+|2015        |Comedy                             |15   |
+|2015        |Documentary                        |12   |
+|2015        |Comedy|Drama                       |8    |
+|2015        |(no genres listed)                 |7    |
+|2015        |Drama|Thriller                     |4    |
+|2015        |Thriller                           |3    |
+|2015        |Comedy|Drama|Romance               |2    |
+|2015        |Action                             |2    |
+|2015        |Action|Adventure|Sci-Fi            |2    |
+|2015        |Action|Crime|Drama|Mystery|Thriller|2    |
+|2015        |Action|Thriller                    |2    |
+|2015        |Horror|Thriller                    |2    |
+|2015        |Crime|Mystery|Thriller             |2    |
+|2015        |Action|Adventure|Comedy            |1    |
+|2015        |Sci-Fi                             |1    |
+|2015        |Action|Adventure|Animation|Children|1    |
+|2015        |Comedy|Sci-Fi                      |1    |
+|2015        |Adventure                          |1    |
+|2015        |Adventure|Drama                    |1    |
++------------+-----------------------------------+-----+
+only showing top 20 rows
+
++------------+------------+------------+
+|release_year|genres      |movies_count|
++------------+------------+------------+
+|2015        |Drama       |15          |
+|2015        |Comedy      |15          |
+|2015        |Documentary |12          |
+|2015        |Comedy|Drama|8           |
+|2014        |Drama       |116         |
+|2014        |Comedy      |76          |
+|2014        |Documentary |75          |
+|2013        |Documentary |156         |
+|2013        |Drama       |155         |
+|2013        |Comedy      |89          |
+|2012        |Drama       |159         |
+|2012        |Documentary |154         |
+|2012        |Comedy      |86          |
+|2011        |Drama       |168         |
+|2011        |Documentary |148         |
+|2011        |Comedy      |82          |
+|2010        |Drama       |156         |
+|2010        |Documentary |138         |
+|2010        |Comedy      |66          |
+|2009        |Drama       |159         |
++------------+------------+------------+
+only showing top 20 rows
+
++------------+-----------+------------+
+|release_year|genres     |movies_count|
++------------+-----------+------------+
+|2015        |Comedy     |15          |
+|2015        |Drama      |15          |
+|2014        |Drama      |116         |
+|2013        |Documentary|156         |
+|2012        |Drama      |159         |
+|2011        |Drama      |168         |
+|2010        |Drama      |156         |
+|2009        |Drama      |159         |
+|2008        |Drama      |150         |
+|2007        |Drama      |140         |
+|2006        |Drama      |134         |
+|2005        |Drama      |126         |
+|2004        |Drama      |122         |
+|2003        |Drama      |96          |
+|2002        |Drama      |119         |
+|2001        |Drama      |114         |
+|2000        |Drama      |116         |
+|1999        |Drama      |107         |
+|1998        |Drama      |100         |
+|1997        |Drama      |93          |
++------------+-----------+------------+
+only showing top 20 rows
+
++------------+------------------+---------------------+--------------------+
+|release_year|total_movies_count|min_movies_per_genres|max_movies_per_genre|
++------------+------------------+---------------------+--------------------+
+|2015        |120               |1                    |15                  |
+|2014        |740               |1                    |116                 |
+|2013        |1011              |1                    |156                 |
+|2012        |1022              |1                    |159                 |
+|2011        |1016              |1                    |168                 |
+|2010        |962               |1                    |156                 |
+|2009        |1113              |1                    |159                 |
+|2008        |979               |1                    |150                 |
+|2007        |902               |1                    |140                 |
+|2006        |855               |1                    |134                 |
+|2005        |741               |1                    |126                 |
+|2004        |706               |1                    |122                 |
+|2003        |655               |1                    |96                  |
+|2002        |678               |1                    |119                 |
+|2001        |633               |1                    |114                 |
+|2000        |613               |1                    |116                 |
+|1999        |542               |1                    |107                 |
+|1998        |555               |1                    |100                 |
+|1997        |528               |1                    |93                  |
+|1996        |509               |1                    |95                  |
++------------+------------------+---------------------+--------------------+
+only showing top 20 rows
+
+root
+ |-- userId: integer (nullable = true)
+ |-- movieId: integer (nullable = true)
+ |-- tag: string (nullable = true)
+ |-- timestamp: integer (nullable = true)
+
++------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|release_year|title                                            |tags                                                                                                                                                                  |
++------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|2015        |A Grain of Truth (2015)                          |thriller,polish-jewish history,Do zassania,crime,Poland,Sandomierz,Abel Korzeniowski,Borys Lankosz,investigation,social commentary,dark,Robert Wieckiewicz,Jerzy Trela|
+|2015        |A Walk in the Woods (2015)                       |Ken Kwapis                                                                                                                                                            |
+|2015        |Adult Camp (2015)                                |                                                                                                                                                                      |
+|2015        |Advantageous (2015)                              |Jennifer Phang                                                                                                                                                        |
+|2015        |Against The Sun (2015)                           |                                                                                                                                                                      |
+|2015        |American Heist (2015)                            |                                                                                                                                                                      |
+|2015        |As We Were Dreaming (2015)                       |based on a book                                                                                                                                                       |
+|2015        |Average Italian (2015)                           |drugs,Marcello Macchia                                                                                                                                                |
+|2015        |Aziz Ansari: Live at Madison Square Garden (2015)|                                                                                                                                                                      |
+|2015        |Beaver Trilogy Part IV (2015)                    |Brad Besser,movie business                                                                                                                                            |
+|2015        |Beck - Familjen (2015)                           |                                                                                                                                                                      |
+|2015        |Beck - Rum 302 (2015)                            |                                                                                                                                                                      |
+|2015        |Big Game (2015)                                  |                                                                                                                                                                      |
+|2015        |Bikes vs Cars (2015)                             |                                                                                                                                                                      |
+|2015        |Bizarre (2015)                                   |                                                                                                                                                                      |
+|2015        |Blackhat (2015)                                  |bkk,hackers                                                                                                                                                           |
+|2015        |Boy Meets Girl (2015)                            |                                                                                                                                                                      |
+|2015        |Brooklyn (2015)                                  |John Crowley,1950s                                                                                                                                                    |
+|2015        |Chappie (2015)                                   |zef,AI,Neill Blomkamp,artificial intelligence,IMAX Digital only,add to prospects list,Sharlto Copley,robots,Touching,South Africa,subculture,police                   |
+|2015        |Chuck Norris vs Communism (2015)                 |Ilinca Calugareanu,movie business                                                                                                                                     |
++------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+only showing top 20 rows
+
+Pyspark Application Completed.
